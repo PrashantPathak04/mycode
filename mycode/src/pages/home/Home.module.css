@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 1rem;
+}
+
+.leftPanel{
+    width:33%;
+    background-color: #fff !important;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.RightPanel{
+    width:66%;
+    background-color: #fff !important;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
