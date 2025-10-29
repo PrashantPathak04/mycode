@@ -14,6 +14,30 @@
 
 .RightPanel{
     width:66%;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: rgb(7, 121, 244);
+    padding-left: 1rem;
+}
+.subPanel{
     background-color: #fff !important;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.role {
+  display: flex;
+  align-items: center; 
+  gap: 8px; 
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-left: 1rem;
+}
+.icon {
+  font-size: 1.5rem;
 }
