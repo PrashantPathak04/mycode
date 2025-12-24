@@ -6,93 +6,81 @@ import HomeIcon from "@mui/icons-material/Home";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import SettingsIcon from "@mui/icons-material/Settings";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
-import { styled } from "@mui/material/styles";
-
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
-  borderRadius: 5,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.grey[200],
-    ...theme.applyStyles("dark", {
-      backgroundColor: theme.palette.grey[800],
-    }),
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
-    backgroundColor: "#1976d2",
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1976d2",
-    }),
-  },
-}));
 
 export default function LeftPannel() {
   return (
     <aside className={styles.leftPanel}>
-      <img
-        src={profileImage}
-        alt="Prashant Pathak"
-        className={styles.profileImage}
-        style={{ width: "100%", height: "350px", verticalAlign: "middle" }}
-      />
-      <h2 className={styles.name}>Prashant Pathak</h2>
+      <div className={styles.card}>
+        <div className={styles.displayContainer}>
+          <img
+            src={profileImage}
+            alt="Prashant Pathak"
+            className={styles.avatar}
+          />
+          <div className={styles.displayBottomLeft}>
+            <h2 className={styles.name}>Prashant Pathak</h2>
+          </div>
+        </div>
+        <div className={styles.cardInner}>
+          <p className={styles.role}>
+            <BusinessCenterIcon className={styles.icon} titleAccess="Job Role Icon" aria-label="job-role"/>
+            <span>Full Stack Developer • MERN</span>
+          </p>
 
-      <div className={styles.role}>
-        <BusinessCenterIcon
-          color="primary"
-          className={styles.icon}
-          titleAccess="Job Role Icon"
-          aria-label="job-role"
-        />
-        <span>Full Stack Developer • MERN</span>
-      </div>
+          <p className={styles.role}>
+            <HomeIcon className={styles.icon} titleAccess="Location Icon" aria-label="location"/>
+            <span>Uttam Nagar, New Delhi, 110059</span>
+          </p>
 
-      <div className={styles.role}>
-        <HomeIcon
-          color="primary"
-          className={styles.icon}
-          titleAccess="Location Icon"
-          aria-label="location"
-        />
-        <span>Uttam Nagar, New Delhi,110059</span>
+          <p className={styles.role}>
+            <EmailIcon className={styles.icon} titleAccess="Email Icon" aria-label="email"/>
+            <a href="mailto:pathakarun.04@gmail.com">pathakarun.04@gmail.com</a>
+          </p>
+
+          <p className={styles.role}>
+            <PhoneAndroidIcon className={styles.icon} titleAccess="Phone Icon" aria-label="phone"/>
+            <span>+91 8448339958</span>
+          </p>
+
+          <hr className={styles.hr} />
+
+          <p className={styles.large}><b>Skills</b></p>
+
+          <p> React Native, React JS, Redux, JavaScript</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '80%' }}>70%</div>
+          </div>
+
+          <p>Node JS, Express JS, Python</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '80%' }}>80%</div>
+          </div>
+
+          <p>AI</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '50%' }}>75%</div>
+          </div>
+
+          <p> MongoDB, SQL, NOSQL</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '50%' }}>50%</div>
+          </div>
+
+          <br />
+
+          <p className={styles.large}><b>Languages</b></p>
+          <p>English</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '90%' }} />
+          </div>
+
+          <p>Hindi</p>
+          <div className={styles.progressOuter}>
+            <div className={styles.progressInner} style={{ width: '90%' }} />
+          </div>
+
+        </div>
       </div>
-      <div className={styles.role}>
-        <EmailIcon
-          color="primary"
-          className={styles.icon}
-          titleAccess="Email Icon"
-          aria-label="email"
-        />
-        <a href="mailto:pathakarun.04@gmail.com">pathakarun.04@gmail.com</a>
-      </div>
-      <div className={styles.role}>
-        <PhoneAndroidIcon
-          color="primary"
-          className={styles.icon}
-          titleAccess="Phone Icon"
-          aria-label="phone"
-        />
-        <span>+91 8448339958</span>
-      </div>
-      <div className={styles.divider} />
-      <div className={styles.role}>
-        <SettingsIcon
-          color="primary"
-          className={styles.icon}
-          titleAccess="Settings Icon"
-          aria-label="settings"
-        />
-        <span className={styles.skills}>Skills</span>
-      </div>
-      <Box sx={{ width: 420 }} style={{ margin: "1rem" }}>
-        <Typography id="input-slider">React JS</Typography>
-        <BorderLinearProgress variant="determinate" value={70} />
-      </Box>
     </aside>
   );
 }
